@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+            
+           <!-- <bean class="com.spring.Student" id="st" >
+            <property name="studentId" value="23"></property>
+            <property name="name" value="Meher"></property>
+            <property name="marks" value="45"></property>
+           </bean>
+           
+           <bean class="com.spring.Student" id="st2">
+            <constructor-arg value="12"></constructor-arg>
+            <constructor-arg value="Krishna"></constructor-arg>
+            <constructor-arg value="78"></constructor-arg>
+           </bean>
+           
+           <bean class="com.spring.Student" id="st3">
+            <property name="studentId" value="456"></property>
+            <property name="name" value="prasanna"></property>
+            <constructor-arg value="95"></constructor-arg>
+           </bean>
+           
+           <bean class="com.spring.Student" id="st4">
+            <constructor-arg index="0" value="158"></constructor-arg>
+            <constructor-arg index="1" value="Satya"></constructor-arg>
+            <property name="marks" value="95"></property>
+            
+           </bean> -->
+           
+           
+           <!-- <bean class="com.spring.Employee" id="emp">
+            <property name="empId" value="12"></property>
+            <property name="name" value="Krishna"></property>
+            <property name="salary" value="15000"></property>
+            <property name="skill">
+           			<list>
+           			   <value>Java</value>
+           			   <value>MySQL</value>
+           			   <value>JBDC</value>
+           			   <value>Hibernate</value>
+           	           <value>spring</value>
+           	           <value>spring</value>
+           			</list> 
+            </property>
+            <property name="skills">
+                  <set>
+           			   <value>Java</value>
+           			   <value>MySQL</value>
+           			   <value>JBDC</value>
+           			   <value>Hibernate</value>
+           	           <value>spring</value>
+           	           <value>spring</value>
+           			</set> 
+            </property>
+            
+            <property name="education">
+                 <map>
+                   <entry key="SSC" value="87"></entry>
+                   <entry key="Diploma" value="73"></entry>
+                   <entry key="BTech" value="86"></entry>
+                 </map>
+            </property>
+            
+           </bean> -->
+           
+           <bean class="com.spring.User" id = "user1">
+              <property name="userId"></property>
+              <property name="name"></property>
+              <property name="age"></property>
+              <property name="address" ref="address"></property>
+        
+           </bean>
+           
+           <bean class="com.sping.Address" id="address">
+               <property name="city" value="Amalapuram"></property>
+               <property name="Street" value="Prabhakar nager"></property>
+               <property name="pincode" value="533201"></property>
+           </bean>
+           
+           <bean class="com.sping.Department" id="department">
+               <property name="deptId" value="Amalapuram"></property>
+               <property name="dept" value="13245"></property>
+              
+           </bean>
+          
+           
+</beans>

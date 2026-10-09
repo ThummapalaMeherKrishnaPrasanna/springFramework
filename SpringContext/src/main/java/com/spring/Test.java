@@ -10,8 +10,26 @@ public class Test {
 
 		ApplicationContext container = new ClassPathXmlApplicationContext("beans.xml");
 		
+		Product product = container.getBean("product" , Product.class);
 		
+		System.out.println(product);
+		
+        
+        
 
+	}
+
+	private static void addUser(ApplicationContext container) {
+		User user1 = container.getBean("user1" , User.class);
+		
+		System.out.println(user1);
+	}
+
+	private static void addEmployee(ApplicationContext container) {
+		
+		Employee employee = container.getBean("emp" , Employee.class);
+		
+		System.out.println(employee);
 	}
 
 	private static void addSutdent(ApplicationContext container) {

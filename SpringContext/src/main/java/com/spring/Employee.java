@@ -1,6 +1,8 @@
 package com.spring;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class Employee {
 	
@@ -10,7 +12,73 @@ public class Employee {
 	
 	int salary;
 	
-	List<String> skill; 
+	List<String> skill;
 	
+	Set<String> skills;
+    
+	Map<String , Integer> education;
+
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	public List<String> getSkill() {
+		return skill;
+	}
+
+	public void setSkill(List<String> skill) {
+		this.skill = skill;
+	}
+	
+	public Set<String> getSkills() {
+		return skills;
+	}
+
+	public void setSkills(Set<String> skills) {
+		this.skills = skills;
+	}
+	
+
+	public Map<String, Integer> getEducation() {
+		return education;
+	}
+
+	public void setEducation(Map<String, Integer> education) {
+		this.education = education;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", name=" + name + ", salary=" + salary + ", skill=" + skill + ", skills="
+				+ skills + ", education=" + education + "]";
+	}
+
+	
+
+	
+	
+	
+
 	
 }
