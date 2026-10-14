@@ -1,0 +1,16 @@
+package com.mul;
+
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+
+public class Jio implements Sim {
+
+	@Override
+	public void call() {
+		System.out.println("jio calling");
+		
+	}
+
+}
