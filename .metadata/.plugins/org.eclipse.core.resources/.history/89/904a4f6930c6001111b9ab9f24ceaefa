@@ -1,0 +1,56 @@
+package com.spring;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext container = new ClassPathXmlApplicationContext("beans.xml");
+		
+	 	JdbcTemplate template = container.getBean("template" , JdbcTemplate.class);
+	       
+	    template.queryForObject("select * from employee where id = ?" , new RowMapper<Employee>() {
+
+		@Override
+		public Employee mapRow(ResultSet rs, int rowNum) throws SQLException {
+			
+			return new Employee(rs.getInt(1) , rs.getString(2) , rs.getInt(3));
+		}
+		
+	   }, 1);
+	     
+	}
+
+	private static void deleteEmployee(JdbcTemplate template) {
+		template.update("delete from employees where id = ? " , 3 );
+	 	
+	 	System.out.println("Employee deleted");
+	}
+
+	private static void updateEmployeeSalary(JdbcTemplate template) {
+		// prepared statement
+	 	template.update("update employees set salary = ? where id = ?" , 40000 , 1);
+	 	
+	 	System.out.println("Employee salary updated");
+	}
+
+	private static void insertEmployee(JdbcTemplate template) {
+		
+		template.update("Insert into employees values(2, 'Krishna' , 30000)");
+	 	
+	     System.out.println("Data inserted into employees");
+	 	
+	     // prepared statement
+	     template.update("insert into employees values(?,?,?)" , 3 , "Prasanna" , 25000);
+	     
+	     System.out.println("Data inserted into employees");
+	}
+
+}

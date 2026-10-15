@@ -10,9 +10,9 @@ public class Test {
 
 		ApplicationContext container = new ClassPathXmlApplicationContext("beans.xml");
 		
-		Product product = container.getBean("product" , Product.class);
+		User user = container.getBean("user" , User.class);
 		
-		System.out.println(product);
+		System.out.println(user);
 		
         
         

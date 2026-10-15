@@ -1,0 +1,6 @@
+1791802260242	Move file
+1791803955691	Extract method 'insertEmployee'
+1791804222009	Extract method 'updateEmployeeSalary'
+1791804368896	Extract method 'deleteEmployee'
+1791805314983	Extract method 'selectEmployee'
+1791805846520	Extract method 'selectAllEmployees'

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;SpringJdbc/src/main/resources/META-INF&apos;" deleteContents="false" description="Delete resource &apos;SpringJdbc/src/main/resources/META-INF&apos;" element1="/SpringJdbc/src/main/resources/META-INF" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1791802265907"/>
+</session>
